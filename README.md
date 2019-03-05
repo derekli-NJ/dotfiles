@@ -1,5 +1,5 @@
 # Dotfiles
-### Dotfiles that I am currently using:#
+### Dotfiles that I am currently using:
 - `.vimrc`: Vim configuration file
 - To be continued...
 
