@@ -6,8 +6,9 @@ set smartindent
 set mouse=a
 set cc=80
 highlight ColorColumn ctermbg=red
-inoremap " ""<left>
 hi Comment ctermfg=LightGreen
+autocmd filetype cpp,c inoremap {<CR> {<CR>}<Esc>O
+
 inoremap <Up> <Nop>
 inoremap <Down> <Nop>
 inoremap <Left> <Nop>
