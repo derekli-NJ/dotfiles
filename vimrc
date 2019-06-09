@@ -18,3 +18,6 @@ noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+
+au Filetype python setl et ts=4 sw=4
+
