@@ -1,7 +1,7 @@
 # Dotfiles
 ### Dotfiles that I am currently using:
 - `.vimrc`: Vim configuration file
--  .tmux.conf: Tmux configuration file
+- `.tmux.conf`: Tmux configuration file
 - To be continued...
 
 ### Helpful Links
