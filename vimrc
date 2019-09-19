@@ -1,5 +1,6 @@
 syntax on
 
+set noshowmode
 colorscheme molokai 
 set number
 set smartindent
@@ -50,3 +51,43 @@ function! InsertTabWrapper()
       endif
     endfunction
     inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+
+set laststatus=2
+set statusline=
+set statusline+=\ 
+set statusline+=«
+set statusline+=\ 
+set statusline+=%{StatuslineMode()} 
+set statusline+=\ 
+set statusline+=»
+set statusline+=\ 
+set statusline+=%y
+set statusline+=%=
+set statusline+=%F
+set statusline+=\ 
+set statusline+=|
+set statusline+=\ 
+set statusline+=%{'Tab='.tabpagenr()}
+
+hi User1 guibg=OrangeRed4 ctermfg=8 guifg=OrangeRed4 ctermbg=15
+
+function! StatuslineMode()
+  let l:mode=mode()
+  if l:mode==#"n"
+    return "NORMAL"
+  elseif l:mode==?"v"
+    return "VISUAL"
+  elseif l:mode==#"i"
+    return "INSERT"
+  elseif l:mode==#"R"
+    return "REPLACE"
+  elseif l:mode==?"s"
+    return "SELECT"
+  elseif l:mode==#"t"
+    return "TERMINAL"
+  elseif l:mode==#"c"
+    return "COMMAND"
+  elseif l:mode==#"!"
+    return "SHELL"
+  endif
+endfunction
