@@ -2,38 +2,48 @@ syntax on
 
 set noshowmode
 colorscheme molokai 
-set number
+set number relativenumber
+
+" Absolute line numbers when in insert mode
+silent! autocmd InsertEnter * :set relativenumber!
+silent! autocmd InsertLeave * :set relativenumber!
+
+"Persistent undo between sessions
+set undofile   
+set undodir=~/.vim/undodir
+
 set smartindent
 set incsearch
+
+"5 line buffer between cursor and top/bottom of screen
 set scrolloff=5
-""set mouse=a
+
+"Ruler and comment coloring
 set cc=80
 highlight ColorColumn ctermbg=red
 hi Comment ctermfg=LightGreen
-"autocmd filetype cpp,c inoremap {<CR> {<CR>}<Esc>O
 
-"inoremap " ""<left>
-"inoremap ' ''<left>
-"inoremap ( ()<left>
-"inoremap [ []<left>
+"Matching braces for convenience
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap        (  ()<Left>
 inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
 inoremap        [  []<Left>
 inoremap <expr> ]  strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]"
-"inoremap {;<CR> {<CR>};<ESC>O
 
+"Disable arrow keys in insert mode
 inoremap <Up> <Nop>
 inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
 
+"Disable arrow keys in normal mode
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
+"4 space tabs for python
 au Filetype python setl et ts=4 sw=4
 
 filetype plugin on
@@ -52,6 +62,8 @@ function! InsertTabWrapper()
     endfunction
     inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
+
+"Custom status bar
 set laststatus=2
 set statusline=
 set statusline+=\ 
