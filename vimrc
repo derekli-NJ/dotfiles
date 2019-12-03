@@ -12,6 +12,7 @@ silent! autocmd InsertLeave * :set relativenumber!
 set undofile   
 set undodir=~/.vim/undodir
 
+set autoindent
 set smartindent
 set incsearch
 
