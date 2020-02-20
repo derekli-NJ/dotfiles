@@ -20,8 +20,8 @@ set incsearch
 set scrolloff=5
 
 "Ruler and comment coloring
-set cc=80
-highlight ColorColumn ctermbg=red
+"set cc=80
+"highlight ColorColumn ctermbg=red
 hi Comment ctermfg=LightGreen
 
 "Matching braces for convenience
@@ -46,6 +46,9 @@ noremap <Right> <Nop>
 
 "4 space tabs for python
 au Filetype python setl et ts=4 sw=4
+
+"Mips Syntax Highlighting
+autocmd BufNewFile,BufRead *.fs setl ft=asm
 
 filetype plugin on
 
