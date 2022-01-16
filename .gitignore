@@ -1,0 +1,8 @@
+# ignore everything
+*
+# don't ignore these files
+!*.vimrc
+!*.tmux.conf
+!.vim/**
+!*.bashrc
+!.gitignore

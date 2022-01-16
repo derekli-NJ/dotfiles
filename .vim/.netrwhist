@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/Users/derekli/Documents/PersonalProjects/emulator/main.dSYM'
+let g:netrw_dirhist_2='/Users/derekli/Documents/CS421/cs421git/assignments/hw1'
+let g:netrw_dirhist_1='/Users/derekli/.vim/colors'
