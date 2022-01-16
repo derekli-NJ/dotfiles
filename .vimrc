@@ -13,6 +13,7 @@ call plug#begin()
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
+Plug 'tpope/vim-commentary'
 
 " For Go: https://github.com/ycm-core/YouCompleteMe/issues/3074
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
